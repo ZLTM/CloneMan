@@ -58,12 +58,12 @@ public class PlayerTrigger : MonoBehaviour
 
         if (NewState=="Win")
         {
-            ResultText.text = "勝者は貴方！！！";
+            ResultText.text = "You are winner";
         }
 
         else if (NewState=="Lose")
         {
-            ResultText.text = "死亡（笑笑笑）";
+            ResultText.text = "lose";
         }
     }
 
