@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using TMPro;
+using UnityEngine;
 
 public class PlayerTrigger : MonoBehaviour
 {
@@ -8,26 +8,25 @@ public class PlayerTrigger : MonoBehaviour
     public AudioClip EnemyClip;
     public AudioSource PlayerSource;     //This is the sound that
     public AudioSource EnemySource;
+
     public float Volume = 1.0f;
     public float CanvasX = 10f;
     public float CanvasY = 10f;
     public float CanvasWidth = 100f; //NOT smaller than 100 or the score wont show
     public float CanvasHeight = 20f;
 
+    public GameObject CanvasCamera;
+    public GameObject PlayerCamera;
+    public GameObject CanvasMenu;
+    public TextMeshProUGUI ResultText;
+
 
     //This is the text that displayed how many you've collected in the top left corner
-    void OnGUI(string Message, string Type)
+    private void Start()
     {
-        GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight), Message + Collected);
-        if (Type=="numeric")
-        {
-            GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight), Message + Collected);
-        }   
-        
-        else if(Type=="text")
-        {
-            GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight),  Message);
-        }
+        CanvasMenu.SetActive(false);
+        CanvasCamera.SetActive(false);
+        PlayerCamera.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,17 +37,38 @@ public class PlayerTrigger : MonoBehaviour
             PlayerSource.PlayOneShot(CollectedClip); //plays the sound assigned to collectedSound
             Collected++; //adds a count of +1 to the collected variable
             Destroy(other.gameObject); //destroy's the collectable
-            OnGUI("Collected", "numeric");
             if (Collected >= 3)
             {
-                OnGUI("勝者は貴方！！！", "text");
+                ChangeState("Win");
             }
         }
 
         if (other.CompareTag("Enemy"))
         { //checks to see if this object is tagged with "collectable"
             EnemySource.PlayOneShot(EnemyClip); //plays the sound assigned to collectedSound
-            OnGUI("死亡（笑笑笑）", "text");
+            ChangeState("Lose");
         }
+    }
+
+    public void ChangeState(string NewState)
+    {
+        CanvasMenu.SetActive(true);
+        CanvasCamera.SetActive(true);
+        PlayerCamera.SetActive(false);
+
+        if (NewState=="Win")
+        {
+            ResultText.text = "勝者は貴方！！！";
+        }
+
+        else if (NewState=="Lose")
+        {
+            ResultText.text = "死亡（笑笑笑）";
+        }
+    }
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight), "Collected:" + Collected);
     }
 }
