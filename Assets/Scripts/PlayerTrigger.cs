@@ -5,7 +5,9 @@ public class PlayerTrigger : MonoBehaviour
 {
     private int Collected = 0; //Set up a variable to store how many you've collected
     public AudioClip CollectedClip;     //This is the sound that will play after you collect one
-    public AudioSource CollectedSource;     //This is the sound that
+    public AudioClip EnemyClip;
+    public AudioSource PlayerSource;     //This is the sound that
+    public AudioSource EnemySource;
     public float Volume = 1.0f;
     public float CanvasX = 10f;
     public float CanvasY = 10f;
@@ -24,14 +26,14 @@ public class PlayerTrigger : MonoBehaviour
 
         if (other.CompareTag("Collectable"))
         { //checks to see if this object is tagged with "collectable"
-            CollectedSource.PlayOneShot(CollectedClip); //plays the sound assigned to collectedSound
+            PlayerSource.PlayOneShot(CollectedClip); //plays the sound assigned to collectedSound
             Collected++; //adds a count of +1 to the collected variable
             Destroy(other.gameObject); //destroy's the collectable
         }
 
         if (other.CompareTag("Enemy"))
         { //checks to see if this object is tagged with "collectable"
-            CollectedSource.PlayOneShot(CollectedClip); //plays the sound assigned to collectedSound
+            EnemySource.PlayOneShot(EnemyClip); //plays the sound assigned to collectedSound
             Collected=666; //adds a count of +1 to the collected variable
         }
     }
