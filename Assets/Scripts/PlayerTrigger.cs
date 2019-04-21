@@ -16,9 +16,18 @@ public class PlayerTrigger : MonoBehaviour
 
 
     //This is the text that displayed how many you've collected in the top left corner
-    void OnGUI()
+    void OnGUI(string Message, string Type)
     {
-        GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight), "Collected:" + Collected);
+        GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight), Message + Collected);
+        if (Type=="numeric")
+        {
+            GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight), Message + Collected);
+        }   
+        
+        else if(Type=="text")
+        {
+            GUI.Label(new Rect(CanvasX, CanvasY, CanvasWidth, CanvasHeight),  Message);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,12 +38,17 @@ public class PlayerTrigger : MonoBehaviour
             PlayerSource.PlayOneShot(CollectedClip); //plays the sound assigned to collectedSound
             Collected++; //adds a count of +1 to the collected variable
             Destroy(other.gameObject); //destroy's the collectable
+            OnGUI("Collected", "numeric");
+            if (Collected >= 3)
+            {
+                OnGUI("勝者は貴方！！！", "text");
+            }
         }
 
         if (other.CompareTag("Enemy"))
         { //checks to see if this object is tagged with "collectable"
             EnemySource.PlayOneShot(EnemyClip); //plays the sound assigned to collectedSound
-            Collected=666; //adds a count of +1 to the collected variable
+            OnGUI("死亡（笑笑笑）", "text");
         }
     }
 }
