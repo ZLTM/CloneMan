@@ -8,12 +8,12 @@
 
 Collection of game mechanics useful while making a slenderman clone, includes:
 
-*Enemy chasing the player
-*Game over after a while being close to the enemy
-*Collect items
-*Win the game after collecting all the items
-*Sounds triggering
-*A cute anime monster (not made by me)
+* Enemy chasing the player
+* Game over after a while being close to the enemy
+* Collect items
+* Win the game after collecting all the items
+* Sounds triggering
+* A cute anime monster (not made by me)
 
 ## Participation
 
