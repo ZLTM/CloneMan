@@ -1,5 +1,5 @@
-# SoundMan
-> Slenderman clone made for a tesis in spatial sound design
+# CloneMan
+> Slenderman clone made as a learning experience
 
 [![Type](https://img.shields.io/badge/Type-Videogame-945C1D.svg)](https://github.com/ZLTM/Taki)
 [![Genre](https://img.shields.io/badge/Genre-Horror-DDA76A.svg)](https://packagist.org/packages/phpunit/phpunit)
@@ -7,11 +7,8 @@
 [![License](https://img.shields.io/badge/License-Apache%202--0-343E7D.svg)](https://packagist.org/packages/phpunit/phpunit)
 
 
-Game made as a tesis for a music school.
-
 ## Participation
 
-* Game designer
 * Programmer
 
 ## Installation
