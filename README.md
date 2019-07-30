@@ -6,6 +6,14 @@
 [![State](https://img.shields.io/badge/State-In%20progress-2C834F.svg)](https://packagist.org/packages/phpunit/phpunit)
 [![License](https://img.shields.io/badge/License-Apache%202--0-343E7D.svg)](https://packagist.org/packages/phpunit/phpunit)
 
+Collection of game mechanics useful while making a slenderman clone, includes:
+
+*Enemy chasing the player
+*Game over after a while being close to the enemy
+*Collect items
+*Win the game after collecting all the items
+*Sounds triggering
+*A cute anime monster (not made by me)
 
 ## Participation
 
@@ -20,7 +28,9 @@ Can also be played from the unity editor by downloading all the proyect, open it
 
 ## Gameplay
 
-Collect all the collectables before the enemy catches you
+No level design, only functioning mechanics.
+
+Get all the collectables before the enemy catches you
 WASD moves the player
 Space jumps
 Shift runs.
