@@ -3,7 +3,7 @@
 
 [![Type](https://img.shields.io/badge/Type-Videogame-945C1D.svg)](https://github.com/ZLTM/Taki)
 [![Genre](https://img.shields.io/badge/Genre-Horror-DDA76A.svg)](https://packagist.org/packages/phpunit/phpunit)
-[![State](https://img.shields.io/badge/State-In%20progress-2C834F.svg)](https://packagist.org/packages/phpunit/phpunit)
+[![State](https://img.shields.io/badge/State-Done-2C834F.svg)](https://packagist.org/packages/phpunit/phpunit)
 [![License](https://img.shields.io/badge/License-Apache%202--0-343E7D.svg)](https://packagist.org/packages/phpunit/phpunit)
 
 Collection of game mechanics useful while making a slenderman clone, includes:
