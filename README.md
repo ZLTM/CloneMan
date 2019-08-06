@@ -1,17 +1,22 @@
-# SoundMan
-> Slenderman clone made for a tesis in spatial sound design
+# CloneMan
+> Slenderman clone made as a learning experience
 
 [![Type](https://img.shields.io/badge/Type-Videogame-945C1D.svg)](https://github.com/ZLTM/Taki)
 [![Genre](https://img.shields.io/badge/Genre-Horror-DDA76A.svg)](https://packagist.org/packages/phpunit/phpunit)
-[![State](https://img.shields.io/badge/State-In%20progress-2C834F.svg)](https://packagist.org/packages/phpunit/phpunit)
+[![State](https://img.shields.io/badge/State-Done-2C834F.svg)](https://packagist.org/packages/phpunit/phpunit)
 [![License](https://img.shields.io/badge/License-Apache%202--0-343E7D.svg)](https://packagist.org/packages/phpunit/phpunit)
 
+Collection of game mechanics useful while making a slenderman clone, includes:
 
-Game made as a tesis for a music school.
+* Enemy chasing the player
+* Game over after a while being too close to the enemy
+* Working collectables
+* Win the game after collecting all the items
+* Sounds triggering
+* A cute anime monster (not made by me)
 
 ## Participation
 
-* Game designer
 * Programmer
 
 ## Installation
@@ -23,7 +28,9 @@ Can also be played from the unity editor by downloading all the proyect, open it
 
 ## Gameplay
 
-Collect all the collectables before the enemy catches you
+No level design, only functioning mechanics.
+
+Get all the collectables before the enemy catches you
 WASD moves the player
 Space jumps
 Shift runs.
@@ -33,9 +40,9 @@ Shift runs.
 David Revilla:
 
 <a href="https://twitter.com/ZLTM_david" target="_blank">
-  <img width="50" height="50" border="0" align="center"  src="Assets/Social/twitter-logo.jpg"></a>
+  <img width="50" height="50" border="0" align="center"  src="https://i.imgur.com/rDHKFDM.jpg"></a>
 <a href="https://www.linkedin.com/in/zolutr/" target="_blank">
-  <img width="50" height="50" border="0" align="center"  src="Assets/Social/linkedin-logo.png"></a>
+  <img width="50" height="50" border="0" align="center"  src="https://i.imgur.com/GkwbFEf.png"></a>
 
 * Write me to: jdavidrevillad@gmail.com
 * Look at my full [C.V](https://drive.google.com/drive/folders/0B9XODKe51qg8aFFXRE9aNE15QWc?usp=sharing)
